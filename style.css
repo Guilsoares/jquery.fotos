@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root{
+    --fontPadrao: 'Roboto', sans-serif;
+    --cor01: #5f27cd;
+    --cor02: #341f97;
+    --cor03: #c8d6e5;
+    --cor04: #fff;
+    --cor05: #009432;
+    --cor06: red;
+    --corTransparent: rgba(0,0,0,0.7);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--fontPadrao);
+}
+
+header{
+    display: flex;
+    background-color: var(--cor01);
+    padding: 16px 0px;
+    color: var(--cor04);
+    border-bottom: 16px solid var(--cor02);
+    justify-content: center;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+header button{
+    margin-left: 10px;
+}
+
+form{
+    background-color: var(--cor03) ;
+    padding: 24px 0;
+    text-align: center;
+    display: none;
+}
+
+input, button{
+    padding: 8px;
+    
+}
+
+form h2{
+    margin-bottom: 16px;
+}
+
+button{
+    background-color: var(--cor05);
+    color: var(--cor04);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#cancel{
+    background-color: red;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+ul li{
+    max-width: 25%;
+    list-style: none;
+    position: relative;
+    max-height: 280px ;
+}
+
+ul li img{
+    width: 100%;
+    height: 100%;
+}
+
+.overlay{
+    padding: 16px;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all ease .9s;
+}
+
+.overlay a{
+    text-decoration: none;
+    color: var(--cor04);
+}
+
+ul li:hover .overlay{
+    opacity: 1;
+}
+
